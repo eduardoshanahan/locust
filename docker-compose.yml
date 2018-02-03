@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+
+  shell:
+    image: eduardoshanahan/locust:latest
+    container_name: eduardoshanahan_locust
+    entrypoint:
+      - /bin/sh
