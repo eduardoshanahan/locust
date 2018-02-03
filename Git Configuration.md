@@ -58,6 +58,9 @@ Edit the file .git/config, and put the following details:
 [user]
 	name = Eduardo Shanahan
 	email = contact@eduardoshanahan.com
+[branch "master"]
+	remote = bitbucket
+	merge = refs/heads/master
 ```
 
 Again, you need to replace the key names and the git configuration for 'Host' with the values you selected in the previous step.
