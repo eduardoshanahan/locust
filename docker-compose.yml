@@ -1,9 +1,26 @@
-version: "3"
+version: "3.4"
 
 services:
 
   shell:
     image: eduardoshanahan/locust:latest
-    container_name: eduardoshanahan_locust
+    container_name: es_locust
     entrypoint:
       - /bin/sh
+
+  example:
+    image: eduardoshanahan/locust:latest
+    container_name: es_locust_example
+    entrypoint:
+      - /bin/sh
+    volumes:
+      - ./example:/example
+    working_dir: /example
+
+  fexample:
+    image: eduardoshanahan/python_dev:latest
+    container_name: es_fexample
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/fexample

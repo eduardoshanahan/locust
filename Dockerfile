@@ -8,7 +8,7 @@ RUN apk add --virtual .install_dependencies_locust \
     python-dev \
     libffi-dev \
     openssl-dev \
-    build-base \
+&&  apk build-base \
     py-pip \
 &&  pip install locust \
 &&  apk del .install_dependencies_locust
